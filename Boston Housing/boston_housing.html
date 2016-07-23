@@ -12128,7 +12128,10 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> Splitting data into test and train sets is important because we would be knowing the true outcomes for the available data, and we can see how our model performs. If we do not own a testing set, we cannot know how does our model perform.</p>
+<p><strong>Answer: </strong></p>
+<ol>
+<li>Splitting is important because, we need to validate the learning of the algorithm. Since we only have the given dataset, we use a greater part of the dataset in training the model and the remainder of it to test how the model is performing on the test set.  If the split is not made, we shall be deploying a model about whose performance we wont have any idea. </li>
+</ol>
 
 </div>
 </div>
@@ -13770,8 +13773,8 @@ AAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ol>
-<li><strong>Max_depth = 1</strong> : This has high variance as the uncertainity in the curve is very high[The shaded area has maximum widht]</li>
-<li><strong>Max_depth = 10</strong> : This model has high bias as the uncertainity in the curve is starting to stabilize[The shaded region has least width]</li>
+<li><strong>Max_depth = 1</strong> : This has high bias as the model has been trained on a very small portion of data. </li>
+<li><strong>Max_depth = 10</strong> : This model has high variance as the model is now predicting with a consistent  R2 score, as the data points increase. Thus we conclude that the model fits for the dataset too well.</li>
 </ol>
 
 </div>
@@ -13844,6 +13847,14 @@ AAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> K-fold cross validation involves splitting the dataset into sets of size 'k'. Then each set is used as a test set and the rest k-1 sets are used for training. The outcomes are then averaged to find the average performance of the model on the dataset.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Split the dataset into sets of size 'k'</li>
+<li>Choose a performance metric to measure the performance of the model</li>
+<li>Perform k iterations of training-testing, each time using one of the set to test and rest k-1 to train.</li>
+<li>Find the performance score for each combination.</li>
+<li>Report the averaged score of each iteration as the average performance of the model.</li>
+</ol>
 
 </div>
 </div>
